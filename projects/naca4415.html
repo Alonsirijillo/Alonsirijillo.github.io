@@ -6,7 +6,7 @@
 <title>NACA 4415 Airfoil — Alonso Cortés</title>
 <meta name="description" content="2D airfoil CFD analysis in OpenFOAM, post-processed in Python.">
 <meta property="og:title" content="NACA 4415 Airfoil — Alonso Cortés">
-<meta property="og:image" content="https://alonsirijillo.github.io/assets/proyectos/naca4415.webp">
+<meta property="og:description" content="2D airfoil CFD analysis in OpenFOAM, post-processed in Python.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/project.css">
@@ -22,19 +22,21 @@
     <h1>NACA 4415 Airfoil</h1>
     <p class="lead">2D airfoil CFD analysis in OpenFOAM, post-processed in Python.</p>
   </section>
-  <div class="wrap"><figure class="hero-img"><img src="../assets/proyectos/naca4415.webp" alt="NACA 4415 Airfoil"></figure></div>
+  <div class="wrap"><figure class="hero-img"><img src="../assets/proyectos/naca4415/1.webp" alt="NACA 4415 Airfoil"></figure></div>
+  <div class="wrap"><div class="stats"><div><strong>8</strong><span>RANS cases</span></div><div><strong>0.850</strong><span>Cl at 5° (SA, wall-resolved)</span></div><div><strong>y+ &lt; 1</strong><span>whole airfoil wall</span></div></div></div>
   <section class="wrap body">
     <aside class="facts">
       <div><h4>Category</h4><p>Simulation</p></div>
-      <div><h4>Tools</h4><p>OpenFOAM · Python</p></div>
-      <div><h4>Deliverables</h4><ul><li>CFD results</li><li>Python post-processing</li></ul></div>
+      <div><h4>Tools</h4><p>OpenFOAM 11 · Python · LaTeX</p></div>
+      <div><h4>Deliverables</h4><ul><li>Visualizations and CSV data</li><li>Editable LaTeX report</li></ul></div>
     </aside>
     <div class="text">
-      <h2>The brief</h2><p>A 2D CFD analysis of the NACA 4415 airfoil.</p>
-      <h2>What I did</h2><ul class="did"><li>Ran the 2D case in OpenFOAM.</li><li>Post-processed the results in Python.</li></ul>
-      
+      <h2>The brief</h2><p>An independent academic CFD study of the NACA 4415 airfoil.</p>
+      <h2>What I did</h2><ul class="did"><li>Ran eight steady RANS cases comparing Spalart-Allmaras and k-epsilon, three mesh resolutions, wall functions and wall-resolved flow at 0° and 5°.</li><li>Checked mesh quality, convergence and wall y+, and independently verified the aerodynamic forces.</li><li>Delivered lift/drag comparisons, pressure and wall-shear distributions and wake profiles.</li></ul>
+      <p class="note">Numerical results only; no experimental validation.</p>
     </div>
   </section>
+  
   <section class="cta"><div class="wrap">
     <h2>Need something similar?</h2>
     <p>Send your references, target formats and deadline. I'll reply with a clear plan and a fixed quote.</p>

@@ -6,7 +6,7 @@
 <title>Front Wing Concept — Alonso Cortés</title>
 <meta name="description" content="AF01 motorsport front wing, modelled in FreeCAD and studied in OpenFOAM.">
 <meta property="og:title" content="Front Wing Concept — Alonso Cortés">
-<meta property="og:image" content="https://alonsirijillo.github.io/assets/proyectos/front-wing.webp">
+<meta property="og:description" content="AF01 motorsport front wing, modelled in FreeCAD and studied in OpenFOAM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/project.css">
@@ -22,19 +22,21 @@
     <h1>Front Wing Concept</h1>
     <p class="lead">AF01 motorsport front wing, modelled in FreeCAD and studied in OpenFOAM.</p>
   </section>
-  <div class="wrap"><figure class="hero-img"><img src="../assets/proyectos/front-wing.webp" alt="Front Wing Concept"></figure></div>
+  <div class="wrap"><figure class="hero-img"><img src="../assets/proyectos/front-wing/1.webp" alt="Front Wing Concept"></figure></div>
+  <div class="wrap"><div class="stats"><div><strong>2000 mm</strong><span>span</span></div><div><strong>3</strong><span>meshes compared</span></div><div><strong>44</strong><span>page report</span></div></div></div>
   <section class="wrap body">
     <aside class="facts">
       <div><h4>Category</h4><p>Engineering</p></div>
-      <div><h4>Tools</h4><p>FreeCAD · OpenFOAM</p></div>
-      <div><h4>Deliverables</h4><ul><li>FreeCAD model</li><li>CFD case and results</li></ul></div>
+      <div><h4>Tools</h4><p>FreeCAD · OpenFOAM 11 · Python</p></div>
+      <div><h4>Deliverables</h4><ul><li>FreeCAD model and STEP</li><li>CFD case study (PDF)</li><li>Technical report</li></ul></div>
     </aside>
     <div class="text">
-      <h2>The brief</h2><p>AF01, a motorsport front wing concept used to connect CAD geometry with aerodynamic analysis.</p>
-      <h2>What I did</h2><ul class="did"><li>Modelled the wing geometry in FreeCAD.</li><li>Prepared the geometry for meshing and ran a flow study in OpenFOAM.</li></ul>
-      
+      <h2>The brief</h2><p>AF01 R5, an independent front wing and nose concept inspired by 2022 single-seater architecture, used to connect CAD geometry with a documented CFD study.</p>
+      <h2>What I did</h2><ul class="did"><li>Modelled four wing elements, 12 separators and an integrated nose across a 2000 mm span.</li><li>Reviewed the geometry: one closed solid, 8 root connections, 24 separator contacts, 108 gap measurements and a STEP reimport check.</li><li>Ran steady incompressible RANS (k-omega SST) at 30 m/s with a moving ground, on three meshes (1.88 / 1.90 / 2.09 million cells).</li><li>Wrote a 44-page report on loads, residuals, continuity, y+, pressure, wall shear and wake.</li></ul>
+      <p class="note">Concept study: convergence, grid independence and experimental validation are not claimed.</p>
     </div>
   </section>
+  <section class="wrap shots"><h2>Inside the project</h2><div class="gallery"><figure><a href="../assets/proyectos/front-wing/2.webp" target="_blank" rel="noopener"><img src="../assets/proyectos/front-wing/2.webp" alt="Front Wing Concept — image 2" loading="lazy"></a></figure><figure><a href="../assets/proyectos/front-wing/3.webp" target="_blank" rel="noopener"><img src="../assets/proyectos/front-wing/3.webp" alt="Front Wing Concept — image 3" loading="lazy"></a></figure></div></section>
   <section class="cta"><div class="wrap">
     <h2>Need something similar?</h2>
     <p>Send your references, target formats and deadline. I'll reply with a clear plan and a fixed quote.</p>

@@ -6,7 +6,7 @@
 <title>Diffuser Flow Study — Alonso Cortés</title>
 <meta name="description" content="Turbulent flow and mesh study in a diffuser with OpenFOAM.">
 <meta property="og:title" content="Diffuser Flow Study — Alonso Cortés">
-<meta property="og:image" content="https://alonsirijillo.github.io/assets/proyectos/diffuser.webp">
+<meta property="og:description" content="Turbulent flow and mesh study in a diffuser with OpenFOAM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/project.css">
@@ -23,18 +23,20 @@
     <p class="lead">Turbulent flow and mesh study in a diffuser with OpenFOAM.</p>
   </section>
   <div class="wrap"><figure class="hero-img"><img src="../assets/proyectos/diffuser.webp" alt="Diffuser Flow Study"></figure></div>
+  <div class="wrap"><div class="stats"><div><strong>5</strong><span>simulation cases</span></div><div><strong>0.0051 %</strong><span>medium→fine flow change</span></div><div><strong>y+ &lt; 1</strong><span>wall-resolved</span></div></div></div>
   <section class="wrap body">
     <aside class="facts">
       <div><h4>Category</h4><p>Simulation</p></div>
-      <div><h4>Tools</h4><p>OpenFOAM · CFD</p></div>
-      <div><h4>Deliverables</h4><ul><li>CFD case</li><li>Flow and mesh study results</li></ul></div>
+      <div><h4>Tools</h4><p>OpenFOAM 11 · ParaView · Python</p></div>
+      <div><h4>Deliverables</h4><ul><li>Mesh and flow visualizations</li><li>Python post-processing and CSV data</li><li>20-page technical report</li></ul></div>
     </aside>
     <div class="text">
-      <h2>The brief</h2><p>Turbulent flow through a diffuser, studied with attention to mesh quality.</p>
-      <h2>What I did</h2><ul class="did"><li>Set up the case in OpenFOAM.</li><li>Ran a mesh study to check that results did not depend on the mesh.</li></ul>
+      <h2>The brief</h2><p>An independent academic CFD study of turbulent flow through a 2D diffuser.</p>
+      <h2>What I did</h2><ul class="did"><li>Built and checked five cases: three meshes with SST wall functions, plus wall-resolved SST and Spalart-Allmaras.</li><li>Assessed flow-rate stability, mass balance, pressure recovery, wall shear and y+.</li><li>Post-processed in Python and documented numerical choices and limitations.</li></ul>
       
     </div>
   </section>
+  <section class="wrap shots"><h2>Inside the project</h2><div class="gallery wide"><figure><a href="../assets/proyectos/diffuser/1.webp" target="_blank" rel="noopener"><img src="../assets/proyectos/diffuser/1.webp" alt="Diffuser Flow Study — image 2" loading="lazy"></a><figcaption>Velocity magnitude</figcaption></figure><figure><a href="../assets/proyectos/diffuser/2.webp" target="_blank" rel="noopener"><img src="../assets/proyectos/diffuser/2.webp" alt="Diffuser Flow Study — image 3" loading="lazy"></a><figcaption>Near-wall mesh refinement</figcaption></figure><figure><a href="../assets/proyectos/diffuser/3.webp" target="_blank" rel="noopener"><img src="../assets/proyectos/diffuser/3.webp" alt="Diffuser Flow Study — image 4" loading="lazy"></a><figcaption>Wall y+ (wall-resolved case)</figcaption></figure></div></section>
   <section class="cta"><div class="wrap">
     <h2>Need something similar?</h2>
     <p>Send your references, target formats and deadline. I'll reply with a clear plan and a fixed quote.</p>
