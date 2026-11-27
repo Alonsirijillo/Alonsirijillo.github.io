@@ -87,7 +87,8 @@
   .panel .kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:12px}
   .panel h1{font-size:clamp(3rem,8vw,6.5rem);margin-bottom:20px}
   .panel p{max-width:320px;font-size:.95rem;opacity:.85;margin-bottom:28px}
-  .panel .btn{border:1px solid rgba(255,255,255,.8);color:#fff;padding:10px 22px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+  .panel{cursor:pointer;color:#fff;text-decoration:none}
+  .panel .btn{text-decoration:none;border:1px solid rgba(255,255,255,.8);color:#fff;padding:10px 22px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
   .panel:hover .btn{background:#fff;color:var(--ink)}
   @media (max-width:760px){
     .split{flex-direction:column;height:auto}
@@ -185,7 +186,7 @@
         <p>Mechanical engineer turning ideas into manufacturing-ready CAD and messy data into clear dashboards.</p>
       </div>
       <div class="split">
-        <a class="panel cad" href="#services" id="cadPanel">
+        <div class="panel cad" id="cadPanel">
           <div class="wheel" aria-hidden="true">
             <img class="spin" src="assets/disco.webp" alt="">
             <img src="assets/caliper.webp" alt="">
@@ -195,9 +196,9 @@
           <span class="kicker">Engineering</span>
           <h1>Design</h1>
           <p>3D CAD, technical drawings and manufacturing-ready files.</p>
-          <span class="btn">CAD services</span>
-        </a>
-        <a class="panel data" href="#services" id="dataPanel">
+          <a class="btn" href="#services">CAD services</a>
+        </div>
+        <div class="panel data" id="dataPanel">
           <div class="screens" aria-hidden="true">
             <div class="screen"><img src="assets/dash-powerbi.webp" alt=""></div>
             <div class="screen back"><img src="assets/dash-airtable.webp" alt=""></div>
@@ -206,8 +207,8 @@
           <span class="kicker">Operations</span>
           <h1>Data</h1>
           <p>Power BI dashboards, Airtable CRMs and Notion systems.</p>
-          <span class="btn">Data services</span>
-        </a>
+          <a class="btn" href="#services">Data services</a>
+        </div>
       </div>
     </div>
   </section>
@@ -357,24 +358,21 @@
   const panel=document.getElementById('cadPanel');
   const layers=[...panel.querySelectorAll('.spin')];
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let ang=0,vel=0,hover=false,go=false,last=performance.now();
+  let ang=0,vel=0,hover=false,last=performance.now();
   function frame(t){
     const dt=Math.min((t-last)/1000,0.05);last=t;
     const base=hover&&!reduce?18:0;
     if(vel>base) vel=Math.max(base,vel*Math.exp(-dt*1.4)-dt*20); else vel+= (base-vel)*Math.min(1,dt*3);
     ang=(ang+vel*dt)%360;
     for(const l of layers) l.style.transform='rotate('+ang+'deg)';
-    if(go&&vel<120){go=false;document.querySelector('#services').scrollIntoView({behavior:reduce?'auto':'smooth'});}
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
   panel.addEventListener('mouseenter',()=>hover=true);
   panel.addEventListener('mouseleave',()=>hover=false);
   panel.addEventListener('click',e=>{
-    if(reduce) return;
-    e.preventDefault();
-    if(go) return;
-    vel=1600;go=true;
+    if(reduce||e.target.closest('.btn')) return;
+    vel=Math.max(vel,1600);
   });
 })();
 </script>
